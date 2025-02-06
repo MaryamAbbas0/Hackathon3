@@ -1,0 +1,39 @@
+                   HACKATHON NO: 03 
+
+                           TASK OF DAY NO: 02
+
+
+
+Q1   Define Technical Requirements?
+Ans  Technical Requirements:
+                              refer to the necessary tools, technologies, and infrastructure that need to be in place to ensure the smooth functioning of your Food Truck Marketplace. Here are the technical requirements for your project
+
+      Frontend Requirements:
+                              Built with Next.js, React, and styled with Tailwind CSS for a responsive and modern design.
+
+      Backend Requirements: 
+                              Managed through Sanity CMS for content (product listings, orders, etc).         
+
+             API: 
+                              API will use Next.js API Routes for backend logic, Sanity CMS for data storage, and Stripe API for payment, ensuring secure, optimized, and efficient operations. 
+
+        User Registration:  
+                              Sign-up/Log-in: Users will register using their email and password, which will be securely stored using JWT for session management. This allows users to place orders, track shipments, and manage their profiles.
+
+        Product Browsing:
+                              Product Listings: Users can browse products from different food trucks, view details like price, description, and customization options.
+                              Search/Filter: Allow users to search and filter food items based on category, price, or popularity.
+
+         Order Placement:   
+                              Add to Cart: Users can add selected food items to their cart, modify quantities, and proceed to checkout.
+                              Payment Integration: Payments can be processed securely via Stripe or PayPal at checkout.
+                                 
+         Shipment Tracking:  
+                              Real-Time Updates: Once the order is placed, users can track the shipment status (e.g., out for delivery, delivered) via Google Maps or another tracking system.
+                              Notifications: Users will receive real-time notifications for order updates, such as when the food truck is nearby or when the order is delivered.                           
+
+
+
+
+                         Complete Day 02
+

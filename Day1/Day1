@@ -1,0 +1,112 @@
+                    HACKATHON NO: 03 
+
+                           TASK OF DAY NO: 01
+
+Q1  Choose Your Marketplace type?
+Ans For my Food Truck website, I have chosen the Single Vendor Marketplace model.
+  This means the platform will exclusively represent my food truck business, allowing customers to browse
+  the menu, place orders, and either pick up their food or opt for delivery, depending
+  on the available service options.
+
+  This model ensures full control over branding, pricing, and customer experience, creating a seamless
+  and efficient ordering process.
+
+
+             DEFINE YOUR BUSINESSS GOAL
+
+
+Q2   What problem does your marketplace aim to solve?
+Ans  My Food Truck Marketplace aims to solve the problem of accessibility and convenience for customers looking for fresh and delicious street food. Many food trucks do not have an online presence, making it difficult for customers to locate them, check their menu, and place orders in advance.
+
+With this platform, customers can easily find my food truck, explore the menu, place orders online, and either pick up their food or opt for delivery. This improves customer experience, reduces waiting time, and helps in better order management.
+
+
+
+Q3   Who is Your Target Audience?
+Ans  My Food Truck Marketplace targets a diverse audience, primarily:
+
+1. Street Food Lovers – People who enjoy fresh and affordable street food.
+2. Busy Professionals & Students – Those looking for quick, convenient, and delicious meals on the go.
+3. Event & Festival Attendees – Individuals visiting food truck festivals, concerts, or public gatherings.
+4. Local Community Members – Residents who prefer nearby food options for pickup or delivery.
+5. Tourists & Travelers – Visitors exploring the city who want to experience local street food.
+
+By catering to these groups, my platform ensures accessibility, convenience, and an enjoyable food experience.
+
+
+
+
+Q4   What Product or Service Will You Offer?
+Ans  My Food Truck Marketplace will offer a variety of delicious and freshly prepared street food items along with convenient online ordering services. The key offerings include:
+
+1. Street Food Menu – A diverse selection of fast food, snacks, and beverages.
+2. Online Ordering – Customers can browse the menu and place orders online for pickup or delivery.
+3. Daily Specials & Discounts – Exclusive deals and discounts for regular customers.
+4. Event Catering – Providing food services for local events, festivals, and private gatherings.
+5. Loyalty Program – Rewarding returning customers with special discounts or free items.
+
+This service ensures that customers get fresh, tasty food with a seamless and hassle-free experience.
+
+
+
+
+Q5  What will set your marketplace apart (e.g., speed, aƯordability, customization)?
+Ans  My Food Truck Marketplace will stand out due to its affordability, speed, and customization options. The key factors that set it apart include:
+
+1. Fast Service – Quick order processing and minimal waiting time for pickup and delivery.
+2. Affordable Pricing – High-quality street food at budget-friendly prices.
+3. Customization – Customers can personalize their meals by selecting ingredients, portion sizes, and spice levels.
+4. Daily Specials & Loyalty Rewards – Exclusive discounts and rewards for repeat customers.
+5. Real-Time Location Tracking – Customers can track the food truck’s live location and estimated arrival time.
+These features ensure a unique, efficient, and enjoyable food experience for customers.
+
+
+
+
+
+                            CREATE A  DATA SCHEMA
+  
+
+Q6  Identify the entities in your marketplace (e.g., Products, Orders, Customers, Delivery Zones). 
+Ans In my Food Truck Marketplace, the main entities will include:
+
+1. Products – The food items listed on the menu, including snacks, beverages, and street food options.
+2. Orders – Customer orders, which will include details like the selected products, quantity, customization preferences, and delivery/pickup options.
+3. Customers – Users who place orders, providing their personal information, contact details, and payment methods.
+4. Delivery Zones – Geographic areas where food delivery is available. This will help identify whether a customer is eligible for delivery or if they should opt for pickup.
+5. Payment Methods – Various payment options such as credit/debit cards, online wallets, and cash on delivery.
+6. Food Trucks – The food trucks listed in the marketplace, including their locations, menus, and operational hours.
+7. Loyalty Program – Customer accounts tracking loyalty points, rewards, and special discounts.
+These entities interact with each other to ensure smooth and efficient operations in the marketplace.
+
+
+
+
+Q7   Draw relationships between these entities using a diagram (pen and paper preferred). Below is an example of a simple schema diagram?
+
+Ans  1. Products are linked to Orders since each order contains selected products.
+2. Orders are connected to Customers because customers place the orders.
+3. Orders are connected to Payment Methods because customers need to pay for their orders.
+4. Orders are also connected to Delivery Zones to determine if the order can be delivered or should be picked up.
+5. Food Trucks are related to Products since the food trucks offer the products.
+6. Customers are linked to Loyalty Programs, as they earn loyalty points based on their orders.
+
+
+
+[Customers] --> [Orders] --> [Products]
+    |               |               |
+    |               V               |
+    V          [Payment Methods] <--|
+[Loyalty Program]    |
+                       V
+               [Delivery Zones]
+                       |
+                [Food Trucks] ---> [Products]
+
+
+
+
+
+                          COMPLETE DAY 01 
+
+

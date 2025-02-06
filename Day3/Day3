@@ -1,0 +1,224 @@
+                   HACKATHON NO: 03 
+
+                           TASK OF DAY NO: 03
+
+
+
+                      API Integration and Data Migration Report 
+        
+
+                            Introduction
+
+My website is built for a food truck service, allowing users to browse and order various food items. It is developed using Next.js and Sanity CMS, where food data is fetched from an API and stored in Sanity CMS. This report explains the API integration and data migration process in detail.
+
+
+
+                          API Integration Process
+
+1. API Selection:
+
+Selected an API that provides food item data.
+
+Studied the API documentation to understand its response format.
+
+
+
+2. Fetching Data from API:
+
+Sent a GET request using Axios or Fetch API.
+
+Received the response in JSON format and validated it.
+
+
+
+3. Processing and Formatting Data:
+
+Formatted API data to match Sanity CMS schema.
+
+Sanitized images and text data for consistency.
+
+
+
+4. Sending Data to Sanity CMS:
+
+Used Sanity Client to store food item data in the database.
+
+Checked for duplicate entries and updated them if needed.
+
+
+
+
+                             Adjustments Made to Schema
+
+Some modifications were made to the Sanity CMS schema to ensure smooth data integration from the API.
+
+1. Added New Fields:
+
+Converted the price field into an integer format.
+
+Structured the category field properly.
+
+Created a function to upload imageUrl to Sanity CMS asset manager.
+
+
+
+2. Data Validation:
+
+Ensured no food item had missing fields.
+
+Set default values for price and category.
+
+
+
+3. Reference Fields Adjustments:
+
+Connected categories and food items using relations.
+
+
+
+
+
+                            Migration Steps & Tools Used
+
+Steps:
+
+1. Installed Required Libraries: Axios, Sanity Client, and dotenv.
+
+
+2. Set Up Sanity Client: Established a connection with Sanity CMS.
+
+
+3. Fetched API Data: Created a function to fetch and format API data.
+
+
+4. Uploaded Data to Sanity CMS: Migrated formatted data to the Sanity database.
+
+
+5. Testing & Debugging: Checked for data consistency and duplication issues.
+
+
+
+                           Tools Used:
+
+
+Sanity CMS – For database and content management.
+
+Axios – To fetch data from the API.
+
+Next.js – For frontend and backend integration.
+
+Postman – To test API responses.
+
+VS Code – For development and debugging.
+
+
+
+
+
+
+
+                 API Integration (Fetching Products from Sanity CMS)
+
+
+                         pages/api/products.ts
+<!-- import type { NextApiRequest, NextApiResponse } from "next";
+import { createClient } from "next-sanity";
+
+const client = createClient({
+  projectId: "your_project_id",
+  dataset: "production",
+  apiVersion: "2023-01-01",
+  useCdn: false,
+});
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const products = await client.fetch(`*[_type == "product"]`);
+    res.status(200).json(products);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching products", error });
+  }
+} -->
+
+
+
+
+                      Migration Script (Adding Initial Food Items in Sanity CMS)
+
+
+                      // scripts/migrateProducts.ts
+
+<!-- import { createClient } from "next-sanity";
+
+const client = createClient({
+  projectId: "your_project_id",
+  dataset: "production",
+  apiVersion: "2023-01-01",
+  token: "your_sanity_token",
+  useCdn: false,
+});
+
+const foodProducts = [
+  {
+    _type: "product",
+    name: "Zinger Burger",
+    price: 450,
+    stock: 10,
+    category: "Fast Food",
+    description: "Crispy chicken fillet with fresh lettuce and mayo.",
+  },
+  {
+    _type: "product",
+    name: "Chicken Biryani",
+    price: 350,
+    stock: 20,
+    category: "Desi Food",
+    description: "Spicy chicken biryani with raita and salad.",
+  },
+];
+
+async function migrate() {
+  for (const product of foodProducts) {
+    await client.create(product);
+  }
+  console.log("Products added successfully!");
+}
+
+migrate().catch(console.error); -->
+
+
+
+                           Payment API Integration
+
+
+                           // pages/api/payment.ts
+<!-- import Stripe from "stripe";
+import type { NextApiRequest, NextApiResponse } from "next";
+
+const stripe = new Stripe("your_stripe_secret_key", {
+  apiVersion: "2023-01-01",
+});
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "POST") {
+    try {
+      const { amount } = req.body;
+
+      const paymentIntent = await stripe.paymentIntents.create({
+        amount: amount * 100,
+        currency: "usd",
+        payment_method_types: ["card"],
+      });
+
+      res.status(200).json({ clientSecret: paymentIntent.client_secret });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  } else {
+    res.setHeader("Allow", ["POST"]);
+    res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+  }
+} -->
+
+
+                          Complete Day 03

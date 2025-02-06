@@ -1,0 +1,68 @@
+                   HACKATHON NO: 03 
+
+                           TASK OF DAY NO: 04
+
+
+
+                Detail Documentation For Dynamic Components And Functionalities
+
+The "FoodTruck" website incorporates various dynamic components to enhance user interaction and streamline 
+the process of browsing food items, placing orders, and tracking them in real-time. 
+These functionalities ensure that users have a smooth and interactive experience from start to finish. 
+The dynamic features are built with React components and are designed to be highly responsive across different devices.
+
+
+Step 1: Functionalities Overview
+Dynamic Menu Display:
+                      The food menu is updated automatically based on the available items.
+Order Management:
+                      Users can select food items, add them to their cart, and proceed to checkout.
+Live Order Tracking:
+                      Users can view the status of their orders, such as "Order Received," "In Progress,"   and "Completed."
+Interactive Feedback and Reviews:
+                                 Users can leave reviews and ratings for the food items.
+Responsive Design:
+                   The website adapts to various screen sizes and devices.
+
+
+Step 1: Functionalities Detial:
+
+1. Dynamic Menu Display
+Description: The menu is automatically updated with available food items, displaying their names, prices, and images.
+
+2. Order Management
+Description: Users can add food items to their cart, proceed to checkout, and place orders.
+
+3. Live Order Tracking
+Description: Users can track the status of their orders (e.g., "In Progress," "Completed") in real-time.
+
+4. Interactive Feedback and Reviews
+Description: Users can leave reviews and ratings for food items, and these are updated dynamically.
+
+5. Responsive Design
+Description: The website adjusts to different screen sizes, ensuring it works well on phones, tablets, and desktops.
+
+
+            
+
+1. Cart Functionality:
+                        Users can add, remove, and update food items in the cart, with the total price updating dynamically in real-time.
+
+2. Checkout:
+              Users can review their cart, enter details, and place orders seamlessly, with real-time order confirmation.
+
+3. Price Calculation: 
+                       The total price updates dynamically based on item quantity, applying any discounts or taxes in real-time.
+
+4. Product Comparing: 
+                       Users can compare multiple food items based on price, ingredients, and reviews to make informed choices.
+
+5. Inventory Management: 
+                         Automatically updates stock levels when items are ordered, preventing out-of-stock purchases and ensuring real-time availability.
+
+6. Integration with Sanity CMS:
+                                The website dynamically fetches and updates food menu items, orders, and reviews from Sanity CMS, ensuring real-time content management without modifying the code.                    
+
+
+                                
+                                Complete Day 04
